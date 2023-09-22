@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html lang="fi" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+    <head>
+        <meta charset="utf-8"/>
+	<!-- Älä muuta tai poista seuraavia script-elementtejä
+	Kurssin oma tarkistin tarkistaa sivusi kieliopin ja harjoitustyöhön liittyviä 
+	ongelmia ja ilmoittaa virheistä selaimen konsolissa. Tämä ei kuitenkaan korvaa kurssin
+	varsinaista harjoitustyötarkistuskonetta. Konsolin ja virheilmoitukset 
+	saat esille seuraavasti:
+
+	Firefox: SHIFT+CTRL+K tai Tools|Web developer|Web console 
+
+	Chrome: SHIFT + CTRL + J tai Command + Option + J (Mac) tai ...|More tools|developer tools|console
+
+	Kaikki virheilmoitukset taltioidaan myös kurssin omaan tietokantaan ja niitä 
+	hyödynnetään kurssimateriaalin ja tarkistimien jatkokehityksessä. --> 
+	<script src="https://appro.mit.jyu.fi/tools/htmlinspector/html-inspector.js"></script> 
+	<script src="https://appro.mit.jyu.fi/tools/itkp1011/itkp1011.js"></script> 
+	<!-- tästä eteenpäin voit muutella vapaasti -->
+        
+		<link href="../tyyli.css" rel="StyleSheet" type="text/css" />
+		<title>sed - ITKP1011-Harjoitustyö</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body>
+	<nav class="navbartop">
+		<ul>
+			<li><a title="Jyvaskylan_yliopisto" href="https://www.jyu.fi/">Jyväskylän yliopisto</a></li>
+			<li><a title="Informaatioteknologian_tiedekunta" href="https://www.jyu.fi/it/">Informaatioteknologian tiedekunta</a></li>
+			<li><a title="Tietotekniikan_oppiaine" href="https://www.jyu.fi/it/fi/opiskelu/kandidaatti-ja-maisteriohjelmat/tietotekniikka">Tietotekniikan oppiaine</a></li>  
+			<li><a title="ITKP1011" href="https://appro.mit.jyu.fi/itkp1011/">ITKP1011</a></li> 
+		</ul>
+	</nav>
+
+	<nav class="navbar">
+		<ul>
+    		<li><a title="gravida" href="../gravida/">gravida</a></li>
+			<li><a title="non" href="../non/">non</a></li>
+			<li><a title="sed" href="#">sed</a>
+        		<ul>
+            		<li><a title="ipsum" href="ipsum/">ipsum</a></li>
+            		<li><a title="tempus" href="tempus/">tempus</a></li>
+        		</ul>
+    		</li>
+    		<li><a title="vel" href="../vel/">vel</a>
+        		<ul>
+            		<li><a title="fames" href="../vel/fames/">fames</a></li>
+            		<li><a title="vivamus" href="../vel/vivamus/">vivamus</a></li>
+        		</ul>
+    		</li>
+		</ul>
+	</nav>
+	<h1>sed - Taso 5</h1>
+	<p>Vestibulum interdum suscipit lorem, in aliquet diam faucibus et. In faucibus volutpat diam, ac dictum enim mollis sed. Aenean maximus enim erat, id fermentum nulla suscipit sit amet. Suspendisse feugiat, metus quis posuere rhoncus, nunc leo sagittis dui, a sagittis diam eros id mi. Sed ac viverra ipsum, et congue sapien. Aenean id quam at eros facilisis lacinia. Mauris non lacinia sem.</p>
+	<p>Vivamus volutpat accumsan dolor, nec molestie turpis elementum nec. Maecenas ac dui ante. Mauris commodo et felis sit amet ultrices. Nunc tincidunt laoreet vehicula. Sed eget tempor ex. Donec quis nulla accumsan, pretium ex at, condimentum leo. Fusce feugiat et magna sed pharetra. Nullam gravida, eros faucibus porta auctor, leo arcu tempus nisi, quis volutpat mi ante at est. Donec ipsum velit, gravida non vulputate ut, varius vitae est.</p>
+	<form class="lomake" action="http://appro.mit.jyu.fi/cgi-bin/view.cgi" method="post">
+		<fieldset>
+			<legend>Henkilötiedot</legend> 
+			<p>
+		  		<label for="nimi">Nimi</label> 
+		  		<input id="nimi" type="text" name="nimi" size ="30" title="" required="required"/>
+			</p>
+			<p>
+		  		<label for="katuosoite">Katuosoite</label> 
+		  		<input id="katuosoite" type="text" name="osoite" size ="30" title="" required="required"/> 
+			</p>
+			<p>
+		  		<label for="postinumero">Postinumero</label> 
+		  		<input id="postinumero" type="text" name="postinumero" size ="30" title="" required="required"/> 
+			</p>
+			<p>
+		  		<label for="postitoimipaikka">Postitoimipaikka</label> 
+		  		<input id="postitoimipaikka" type="text" name="postitoimipaikka" size ="30" title="" required="required"/> 
+			</p>
+			<p>
+		  		<label for="email">Sähköpostiosoite</label>
+				<input id="email" type="email" name="email" size="30" required="required"/>
+			</p>
+			<p>Sukupuoli</p>
+			<div class="sukupuoli">
+				<label for="mies">Mies</label>
+				<input type="radio" name="sukupuoli" id="mies" value="mies" checked="checked" required="required" /><br/>
+				<label for="nainen">Nainen</label>
+				<input type="radio" name="sukupuoli" id="nainen" value="nainen" checked="checked" required="required" /><br/>
+				<label for="enkerro">En kerro</label>
+				<input type="radio" name="sukupuoli" id="enkerro" value="enkerro" checked="checked" required="required" /><br/>
+			</div>
+			<div class="syntaikajakengannro">
+				<p>
+					<label for="syntaika">Syntymäaika</label>
+					<input id="syntaika" name="syntaika" type="date" min="1900-01-01" max="2017-01-01" required="required"/>
+				</p>
+				<p>
+					<label for="kengannro">Kengän numero</label>
+					<input id="kengannro" name="kengannro" type="number" min="20" max="60" value="40" required="required"/>
+				</p>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Lisäpalvelut</legend>
+			<div class="lisapalvelut">
+				<label for="aamiainen">Aamiainen</label>
+				<input id="aamiainen" type="checkbox" name="lisapalvelu" value="aamiainen" /><br/>
+				<label for="paivallinen">Päivällinen</label>
+				<input id="paivallinen" type="checkbox" name="lisapalvelu" value="paivallinen" /><br/>
+				<label for="valipala">Välipala</label>
+				<input id="valipala" type="checkbox" name="lisapalvelu" value="valipala" /><br/>
+				<label for="iltapala">Iltapala</label>
+				<input id="iltapala" type="checkbox" name="lisapalvelu" value="iltapala" /><br/>
+				<label for="yopala">Yöpala</label>
+				<input id="yopala" type="checkbox" name="lisapalvelu" value="yopala" /><br/>
+			</div>
+		</fieldset>
+		<p><input id="laheta" type="submit" value="Lähetä" /></p>
+		</form>
+	<p>Etiam laoreet sit amet nulla at euismod. Maecenas ac sem porta, finibus sapien sit amet, sollicitudin ipsum. In non aliquet elit. In accumsan quis neque in luctus. Sed vel hendrerit sem. Nulla et eros finibus, ullamcorper augue et, commodo neque. Praesent vulputate efficitur magna, ut imperdiet ex aliquam vel. Donec ut aliquet quam, a iaculis lorem. Ut scelerisque velit metus, non lobortis urna dignissim in. Mauris tempor orci varius metus venenatis iaculis. Nam tempor purus ut urna mattis tempor. Nullam tristique rutrum sem et dictum. Vivamus non velit pretium, facilisis erat ac, condimentum risus.</p>
+	<p>Vestibulum eleifend, urna vel sagittis semper, ante tortor maximus lectus, a iaculis velit diam quis ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla in ligula sodales, sagittis eros a, feugiat massa. Integer ante eros, placerat at venenatis quis, sagittis ut odio. Curabitur ornare maximus facilisis. Quisque nibh orci, lacinia eu ligula id, rutrum fermentum mi. Curabitur placerat velit auctor, tempor dui vel, lobortis sem. Curabitur enim erat, ultricies vel auctor quis, facilisis eu neque. Mauris ultricies ut nisl non ultricies. Sed hendrerit dolor nisl, in eleifend sem commodo ac. Vivamus tempus velit non nibh maximus, non tempor mauris imperdiet. Curabitur porta interdum mauris, id fringilla ipsum porttitor ut. Morbi at dolor finibus, vehicula ipsum at, posuere nisi.</p>
+	<div class="navbardown">
+		<div class="right">Tarmo Ilves</div>
+		<div class="right">©</div> 
+		<a class="left" href="../">ITKP1011 Harjoitustyö</a>
+	</div>
+</body>
+</html>

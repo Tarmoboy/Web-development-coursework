@@ -1,0 +1,446 @@
+body {
+  background-color: white;
+  color: black;	
+  font-family: "Verdana", sans-serif;
+  margin: 0;
+}
+
+h1 { 
+  background-color: white;
+  color: black;	
+  font-family: "Verdana", sans-serif;
+  margin-right: 1em;
+  margin-top: 0.8em;
+  margin-bottom: 0.6em;
+}
+
+h2 {
+  margin-bottom: 0.2em;
+}
+
+p { 
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.navbar {
+  border-style: dotted;
+  border-width: 0.7em;
+  border-color: #8aff40;
+  background-color: #e4f5d6;
+  color: black;
+  width: 15em;
+  margin-left: 0.3em;
+  margin-right: 0.4em;
+  margin-top: 2em;
+  margin-bottom: -0.3em;
+  float: right;
+}
+
+.navbar ul {
+  margin-left: 1em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  padding-left: 0.4em;
+  padding-right: 0.2em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbartop {
+  flex: none;
+  display: inline-block;
+  position: relative;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  background-color: #e4f5d6;
+  color: white;
+  width: 100%;
+  height: 3em;
+}
+
+.navbartop ul {
+  padding-top: 0.4em;
+  padding-bottom: 0.3em;
+  padding-left: 0;
+  margin-left: 0.4em;
+}
+
+.navbartop ul li {
+  display: inline;
+  border-left: 1px solid #8aff40;
+  margin-left: 0.5em;
+  padding-left: 0.6em;
+}
+
+.navbartop ul li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.navbardown {
+  padding-top: 0.3em;
+  padding-bottom: 1.5em;
+  margin-bottom: 0;
+  background-color:#e4f5d6;
+  width: 100%;
+  clear: both;
+}
+
+.left {
+  text-align: justify;
+  padding-left: 0.4em;
+  float: left;
+}
+
+.right {
+  text-align: justify;
+  padding-right: 0.4em;
+  float: right;
+}
+
+.navbarleft {
+  background-color: #e4f5d6;
+  color: black;
+  height: auto;
+  text-align: justify;
+}
+
+.navbarleft ul {
+  margin-left: 1em;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  padding-left: 0.4em;
+  padding-right: 3em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbarleft form {
+  margin-top: 0.5em;
+}
+
+a:link {
+  color: #0011ff;
+}
+
+a:visited {
+  color: #990099;
+}
+
+a:hover {
+  background-color: #21a500;
+  color: white;
+}
+
+.navbartop a:link, .navbar a:link, .navbarleft a:link {
+  color: #0011ff;
+}
+
+.navbartop a:visited, .navbar a:visited, .navbarleft a:visited {
+  text-decoration: none;
+  color: #990099;
+}
+
+.etusivukuva {
+  margin-left: 2.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  display: inline-block;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.etusivukuva p {
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+}
+
+table {
+  margin-left: 0.1em;
+  border-collapse: collapse;
+  border: 3px solid;
+  border-color:  #8aff40;
+  border-style: dashed;
+  width: 22em;
+}
+
+td {
+  border: 1px solid;
+  border-color: #8aff40;
+  padding-right: 0.3em;
+  padding-top: 0.3em;
+  padding-left: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+th {
+  border: 1px solid;
+  border-color:  #8aff40;
+  padding-right: 0.2em;
+  padding-top: 0.3em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+}
+
+.clear {
+  clear: both;   
+}
+
+.galleria {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.7em;
+  margin-bottom: 0;
+}
+
+.galleria div {
+  float: left;
+  width: 21em;
+  height: 15em;
+  text-align: center;
+  clear: right;
+  margin-top: 0.1em;
+  position: relative;
+}
+
+.galleria div p {
+  height: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.youtube {
+  width: 55vw;
+  height: calc(55vw*0.5625);
+}
+
+.flexbox {
+  display: flex;
+  height: auto;
+}
+
+.flexbox div {
+  background-color: #e4f5d6;
+}
+
+.video {
+  width: 100%;
+}
+
+.lomake {
+	margin-top: 1em;
+	max-width: 63%;
+	margin-bottom: 5em;
+	clear: right;
+}
+
+.lomake p {
+  margin-bottom: 0.8em;
+}
+
+#nimi, #katuosoite, #postinumero, #postitoimipaikka, #email , #syntaika, #kengannro {
+	float: right;
+	clear: both;
+}
+
+.sukupuoli {
+	float: right;
+	margin-bottom: 1em;
+}
+
+#mies, #nainen, #enkerro {
+	float: right;
+}
+
+.syntaikajakengannro {
+	clear: both;
+}
+
+.lisapalvelut {
+	float: right;
+	text-align: right;
+}
+
+#laheta {
+	margin-top: 0.5em;
+	float: right;
+	clear: both;
+}
+
+
+@media print {
+.navbartop, .navbar, .navbarleft, .navbardown, .right, .left {
+  display: none;
+  }
+body {
+  margin-top: 0.5cm;
+  margin-left: 0.5cm;
+  margin-right: 0.5cm;
+  margin-bottom: 0.5cm;
+  font-family: "Times New Roman", sans-serif;
+  }
+}
+
+@media all and (max-width: 600px) {
+  body {
+    background-color: white;
+    color: black;	
+    font-family: "Verdana", sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.1em;
+    margin-bottom: 0;
+    font-size: 100%;
+    padding-top: 0;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 190%;
+    display: inline-flex;
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5em;
+  }
+
+  img {
+    max-width: 85%;
+  }
+  
+  .video {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 2px;
+  }
+  
+  ul {
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1em;
+    padding: 0;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbartop form {
+    display: none;
+  }
+
+  .navbartop {
+    background-color: #e4f5d6;
+    color: black;
+    width: 48%;
+    margin-right: 0.2em;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    margin-left: 0;
+    float: right;
+    list-style-type: disc;
+    min-height: 13em;
+  }
+
+  .navbartop ul li {
+		display: list-item;
+		border-left: none;
+		padding-left: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	
+	.navbartop ul li:first-child {
+		margin-left: 0.5em;
+		padding-left: 0;
+	}
+  
+  .navbartop ul {
+    display: inline-block;
+    margin: 0;
+    margin-left: 0.4em;
+    padding: 0;
+    padding-left: 0;
+    margin-top: 0.1em;
+    list-style-type: disc;
+  }
+
+  .navbar form {
+    display: none;
+  }
+  
+  .navbar {
+    border-style: none;
+    background-color: #e4f5d6;
+    color: black;
+    width: 48%;
+    margin-right: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    margin-left: 0.2em;
+    float: left;
+    min-height: 13em;
+  }
+  
+  .navbar ul {
+    margin-left: 0.9em;
+    padding-left: 0;
+    margin-top: 0.1em;
+  }
+  
+  .navbarleft {
+    background-color: #e4f5d6;
+    color: black;
+    width: 48%;
+    margin-left: 0.2em;
+    margin-top: 0.7em;
+    margin-bottom: 0;
+    float: left;
+    min-height: 13em;
+  }
+
+  .navbarleft ul {
+    padding-left: 0;
+    margin-top: 0.1em;
+  }
+
+  .etusivukuva {
+    margin-left: 0em;
+    margin-bottom: 0;
+  }
+
+  .galleria {
+    margin-top: 1em;
+  }
+  
+  .flexbox {
+    display: inline-block;
+  }
+
+  .youtube {
+    width: 99%;
+    height: calc(99vw * 0.5625);
+  }
+
+  .video {
+    width: 99%;
+  }
+
+  .lomake {
+    max-width: 100%;
+  }
+
+}
+
+
